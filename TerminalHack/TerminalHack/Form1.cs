@@ -10,11 +10,20 @@ using System.Windows.Forms;
 
 namespace TerminalHack
 {
-    public partial class Welcome : Form
+    public partial class WelcomeForm : Form
     {
-        public Welcome()
+        public WelcomeForm()
         {
             InitializeComponent();
+        }
+
+        private void btnBegin_Click(object sender, EventArgs e)
+        {
+          
+            GameForm gameForm = new GameForm();
+            Hide();
+            gameForm.ShowDialog();
+            Close();
         }
     }
 }
