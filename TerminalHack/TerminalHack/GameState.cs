@@ -12,24 +12,27 @@ namespace TerminalHack
 {
     class GameState
     {
-        
+        public string difficulty;
 
-        public GameState()
+        public GameState(string difficulty)
         {
-           
+           this.difficulty = difficulty;
         }
-        
+       
+       
         public List<String> SelectWordList()
         {
-            string wholeFile;
-            string[] lines;
-            
+            //string wholeFile;
+            //string[] lines;
+            string line;
             
             var list = new List<string>();
+            
             System.IO.StreamReader currReader = new System.IO.StreamReader("C:\\projects\\c#\\terminal-hack\\TerminalHack\\easy.txt");
-            wholeFile = currReader.ReadToEnd();
-            lines = wholeFile.Split(' ');
-            foreach (string line in lines)
+            //wholeFile = currReader.ReadToEnd();
+           // lines = wholeFile.Split(' ');
+           // foreach (string line in lines)
+            while((line = currReader.ReadLine()) != null)
             {
                 list.Add(line);
                 

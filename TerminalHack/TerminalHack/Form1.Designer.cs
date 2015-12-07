@@ -102,8 +102,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnBegin;
-        private System.Windows.Forms.ComboBox cmbDifficulty;
         private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.ComboBox cmbDifficulty;
     }
 }
 

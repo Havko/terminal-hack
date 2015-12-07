@@ -39,6 +39,12 @@
             this.btnWord9 = new System.Windows.Forms.Button();
             this.btnWord10 = new System.Windows.Forms.Button();
             this.btnWord6 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblIncorrect = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblLastGuess = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnBegin2
@@ -61,6 +67,7 @@
             this.btnWord1.TabIndex = 1;
             this.btnWord1.Text = "button1";
             this.btnWord1.UseVisualStyleBackColor = false;
+            this.btnWord1.Visible = false;
             this.btnWord1.Click += new System.EventHandler(this.btnWord1_Click);
             // 
             // btnWord5
@@ -72,6 +79,8 @@
             this.btnWord5.TabIndex = 3;
             this.btnWord5.Text = "button1";
             this.btnWord5.UseVisualStyleBackColor = false;
+            this.btnWord5.Visible = false;
+            this.btnWord5.Click += new System.EventHandler(this.btnWord5_Click);
             // 
             // btnWord4
             // 
@@ -82,6 +91,8 @@
             this.btnWord4.TabIndex = 4;
             this.btnWord4.Text = "button1";
             this.btnWord4.UseVisualStyleBackColor = false;
+            this.btnWord4.Visible = false;
+            this.btnWord4.Click += new System.EventHandler(this.btnWord4_Click);
             // 
             // btnWord3
             // 
@@ -92,6 +103,8 @@
             this.btnWord3.TabIndex = 5;
             this.btnWord3.Text = "button1";
             this.btnWord3.UseVisualStyleBackColor = false;
+            this.btnWord3.Visible = false;
+            this.btnWord3.Click += new System.EventHandler(this.btnWord3_Click);
             // 
             // btnWord2
             // 
@@ -102,6 +115,8 @@
             this.btnWord2.TabIndex = 6;
             this.btnWord2.Text = "button1";
             this.btnWord2.UseVisualStyleBackColor = false;
+            this.btnWord2.Visible = false;
+            this.btnWord2.Click += new System.EventHandler(this.btnWord2_Click);
             // 
             // btnWord7
             // 
@@ -112,6 +127,8 @@
             this.btnWord7.TabIndex = 12;
             this.btnWord7.Text = "button1";
             this.btnWord7.UseVisualStyleBackColor = false;
+            this.btnWord7.Visible = false;
+            this.btnWord7.Click += new System.EventHandler(this.btnWord7_Click);
             // 
             // btnWord8
             // 
@@ -122,6 +139,8 @@
             this.btnWord8.TabIndex = 11;
             this.btnWord8.Text = "button1";
             this.btnWord8.UseVisualStyleBackColor = false;
+            this.btnWord8.Visible = false;
+            this.btnWord8.Click += new System.EventHandler(this.btnWord8_Click);
             // 
             // btnWord9
             // 
@@ -132,6 +151,8 @@
             this.btnWord9.TabIndex = 10;
             this.btnWord9.Text = "button1";
             this.btnWord9.UseVisualStyleBackColor = false;
+            this.btnWord9.Visible = false;
+            this.btnWord9.Click += new System.EventHandler(this.btnWord9_Click);
             // 
             // btnWord10
             // 
@@ -142,6 +163,8 @@
             this.btnWord10.TabIndex = 9;
             this.btnWord10.Text = "button1";
             this.btnWord10.UseVisualStyleBackColor = false;
+            this.btnWord10.Visible = false;
+            this.btnWord10.Click += new System.EventHandler(this.btnWord10_Click);
             // 
             // btnWord6
             // 
@@ -152,13 +175,79 @@
             this.btnWord6.TabIndex = 7;
             this.btnWord6.Text = "button1";
             this.btnWord6.UseVisualStyleBackColor = false;
+            this.btnWord6.Visible = false;
+            this.btnWord6.Click += new System.EventHandler(this.btnWord6_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(253, 267);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(151, 13);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Incorrect Guesses:";
+            this.label1.Visible = false;
+            // 
+            // lblIncorrect
+            // 
+            this.lblIncorrect.AutoSize = true;
+            this.lblIncorrect.Location = new System.Drawing.Point(422, 267);
+            this.lblIncorrect.Name = "lblIncorrect";
+            this.lblIncorrect.Size = new System.Drawing.Size(15, 13);
+            this.lblIncorrect.TabIndex = 14;
+            this.lblIncorrect.Text = "0";
+            this.lblIncorrect.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(253, 295);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(95, 13);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Last Guess:";
+            this.label2.Visible = false;
+            // 
+            // lblLastGuess
+            // 
+            this.lblLastGuess.AutoSize = true;
+            this.lblLastGuess.Location = new System.Drawing.Point(366, 295);
+            this.lblLastGuess.Name = "lblLastGuess";
+            this.lblLastGuess.Size = new System.Drawing.Size(0, 13);
+            this.lblLastGuess.TabIndex = 16;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(253, 324);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(215, 13);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "Correct Letters in Guess: ";
+            this.label3.Visible = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(466, 324);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(15, 13);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "0";
+            this.label4.Visible = false;
             // 
             // GameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(782, 424);
+            this.ClientSize = new System.Drawing.Size(782, 360);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblLastGuess);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblIncorrect);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnWord7);
             this.Controls.Add(this.btnWord8);
             this.Controls.Add(this.btnWord9);
@@ -177,6 +266,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Game";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -193,5 +283,11 @@
         private System.Windows.Forms.Button btnWord9;
         private System.Windows.Forms.Button btnWord10;
         private System.Windows.Forms.Button btnWord6;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblIncorrect;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblLastGuess;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
