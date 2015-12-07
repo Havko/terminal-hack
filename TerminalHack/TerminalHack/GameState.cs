@@ -1,8 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace TerminalHack
 {
@@ -14,7 +18,7 @@ namespace TerminalHack
         {
            
         }
-
+        
         public List<String> SelectWordList()
         {
             string wholeFile;
@@ -22,7 +26,7 @@ namespace TerminalHack
             
             
             var list = new List<string>();
-            System.IO.StreamReader currReader = new System.IO.StreamReader("C:\\projects\\c#\\terminal-hack\\TerminalHack\\TerminalHack\\bin\\Debug\\easy.txt");
+            System.IO.StreamReader currReader = new System.IO.StreamReader("C:\\projects\\c#\\terminal-hack\\TerminalHack\\easy.txt");
             wholeFile = currReader.ReadToEnd();
             lines = wholeFile.Split(' ');
             foreach (string line in lines)
@@ -30,13 +34,17 @@ namespace TerminalHack
                 list.Add(line);
                 
             }
+            int seed = (int)DateTime.Now.Ticks;
+            Random rand = new Random(seed);
             var finalList = new List<string>();
             for (int i = 0; i<10; i++){
-            Random rand = new Random(list.Count());
+             
+            
             int index = rand.Next(list.Count);
             var word = list[index];
             list.RemoveAt(index);
             finalList.Add(word);
+            
             }
             return finalList;
         }
